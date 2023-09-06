@@ -1,0 +1,316 @@
+{
+  "id" : "64f819d870ff2647cc52cffc",
+  "cts" : 1693981143890,
+  "createdUserName" : "Darshan Shivashankar",
+  "modifiedUserName" : "Darshan Shivashankar",
+  "mts" : 1693981143890,
+  "createdBy" : "60367d4038e56d398c70be6f",
+  "modifiedBy" : "60367d4038e56d398c70be6f",
+  "type" : "REST",
+  "name" : "Petstore Aws",
+  "description" : "Swagger Documentation for Petstore Aws",
+  "tags" : { },
+  "disableExecuteApiEndpoint" : false,
+  "endpointConfiguration" : {
+    "type" : "REGIONAL",
+    "vpcEndpointIds" : [ ]
+  },
+  "apiKeySource" : "HEADER",
+  "binaryMediaTypes" : [ ],
+  "enableContentEncoding" : false,
+  "minimumCompressionSize" : 0,
+  "resources" : [ {
+    "name" : "/",
+    "childResources" : {
+      "/pets" : {
+        "name" : "/pets",
+        "childResources" : { },
+        "methods" : {
+          "GET" : {
+            "methodRequest" : {
+              "apiKeyRequired" : false,
+              "authorizationType" : "NONE"
+            },
+            "integrationRequest" : {
+              "connectionType" : "INTERNET",
+              "httpMethod" : "GET",
+              "queryRequestParameter" : [ ],
+              "headerRequestParameter" : [ ],
+              "pathRequestParameter" : [ ],
+              "defaultTimeout" : true,
+              "type" : "HTTP",
+              "integrationType" : "HTTP",
+              "uri" : "http://petstore.execute-api.ap-south-1.amazonaws.com/petstore/pets",
+              "cacheCredentials" : "NONE"
+            },
+            "integrationResponse" : {
+              "200" : {
+                "selectionPattern" : "200"
+              }
+            },
+            "methodResponse" : {
+              "200" : { }
+            },
+            "path" : "GET /pets"
+          }
+        },
+        "parentId" : "3wzrubj2a2",
+        "id" : "8myyqd",
+        "path" : "/pets",
+        "resourceId" : "8bfe25c5cd684690862b7b3fc60dc546"
+      }
+    },
+    "methods" : { },
+    "parentId" : "3wzrubj2a2",
+    "id" : "3wzrubj2a2"
+  } ],
+  "httpIntegration" : [ ],
+  "models" : [ ],
+  "connectorId" : "64d0e4525eba0f0bc3b63b20",
+  "apiId" : "y03w5ekl7a",
+  "authorizers" : [ ],
+  "gatewayResponse" : [ {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "504",
+    "responseType" : "INTEGRATION_FAILURE",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "404",
+    "responseType" : "RESOURCE_NOT_FOUND",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "413",
+    "responseType" : "REQUEST_TOO_LARGE",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "429",
+    "responseType" : "THROTTLED",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "415",
+    "responseType" : "UNSUPPORTED_MEDIA_TYPE",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "500",
+    "responseType" : "AUTHORIZER_CONFIGURATION_ERROR",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "responseType" : "DEFAULT_5XX",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "responseType" : "DEFAULT_4XX",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "400",
+    "responseType" : "BAD_REQUEST_PARAMETERS",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "400",
+    "responseType" : "BAD_REQUEST_BODY",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "403",
+    "responseType" : "WAF_FILTERED",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "403",
+    "responseType" : "EXPIRED_TOKEN",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "403",
+    "responseType" : "ACCESS_DENIED",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "403",
+    "responseType" : "INVALID_API_KEY",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "401",
+    "responseType" : "UNAUTHORIZED",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "500",
+    "responseType" : "API_CONFIGURATION_ERROR",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "429",
+    "responseType" : "QUOTA_EXCEEDED",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "504",
+    "responseType" : "INTEGRATION_TIMEOUT",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "403",
+    "responseType" : "MISSING_AUTHENTICATION_TOKEN",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "403",
+    "responseType" : "INVALID_SIGNATURE",
+    "defaultResponse" : true
+  }, {
+    "responseParameters" : [ ],
+    "responseTemplates" : {
+      "application/json" : "{\"message\":$context.error.messageString}"
+    },
+    "statusCode" : "500",
+    "responseType" : "AUTHORIZER_FAILURE",
+    "defaultResponse" : true
+  } ],
+  "requestValidators" : [ {
+    "name" : "Validate body",
+    "validateRequestBody" : true,
+    "validateRequestParameters" : false,
+    "id" : "zjcida"
+  }, {
+    "name" : "Validate query string parameters and headers",
+    "validateRequestBody" : false,
+    "validateRequestParameters" : true,
+    "id" : "ix3f8m"
+  }, {
+    "name" : "Validate body,query string parameters and headers",
+    "validateRequestBody" : true,
+    "validateRequestParameters" : true,
+    "id" : "jtze3t"
+  } ],
+  "scmUpload" : {
+    "repoName" : "test",
+    "branch" : "main",
+    "hostUrl" : "https://github.com/Akashk721/test.git",
+    "folderName" : "aws",
+    "commitMessage" : "api",
+    "token" : "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",
+    "scmSource" : "git",
+    "username" : "Akashk721",
+    "password" : "",
+    "authType" : "token"
+  },
+  "throttleSettings" : { },
+  "stage" : {
+    "id" : "64f81a2e70ff2647cc52cffe",
+    "cacheClusterEnabled" : false,
+    "cacheClusterSize" : "",
+    "cacheClusterStatus" : "NOT_AVAILABLE",
+    "deploymentId" : "h4xcqp",
+    "stageName" : "ProperDataRest",
+    "tags" : { },
+    "tracingEnabled" : false,
+    "variables" : {
+      "asdf" : "asdf",
+      "mnmn" : "njn"
+    },
+    "canarySetting" : {
+      "deploymentId" : "h4xcqp",
+      "percentTraffic" : 0.0,
+      "stageVariableOverrides" : { },
+      "useStageCache" : false
+    },
+    "apiId" : "64f819d870ff2647cc52cffc",
+    "webAclName" : "",
+    "stageDescription" : "ProperDataRest",
+    "clientCertificateId" : "",
+    "methodSettings" : {
+      "*/*" : {
+        "cacheDataEncrypted" : false,
+        "cacheTtlInSeconds" : 0,
+        "cachingEnabled" : false,
+        "dataTraceEnabled" : false,
+        "loggingLevel" : "OFF",
+        "metricsEnabled" : false,
+        "requireAuthorizationForCacheControl" : false,
+        "throttlingBurstLimit" : 0,
+        "throttlingRateLimit" : 0.0,
+        "unauthorizedCacheControlHeaderStrategy" : ""
+      }
+    },
+    "connectorId" : "64d0e4525eba0f0bc3b63b20",
+    "connectorName" : "NorthEast",
+    "enableAccessLogging" : false,
+    "enableThrottling" : true,
+    "accessLogFormat" : "",
+    "type" : "REST",
+    "webAclARN" : "",
+    "accessLogARN" : "",
+    "invokeURL" : "https://y03w5ekl7a.execute-api.ap-southeast-1.amazonaws.com/ProperDataRest"
+  },
+  "existing" : true
+}
